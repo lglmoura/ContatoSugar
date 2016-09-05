@@ -1,5 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.edu.iff.pooa20161.contatossugar">
+    package="br.edu.iff.pooa20161.contatossugar"
+    android:name="com.orm.SugarApp">
+
+    <meta-data android:name="DATABASE" android:value="sugar_contato.db" />
+    <meta-data android:name="VERSION" android:value="1" />
+    <meta-data android:name="QUERY_LOG" android:value="false" />
+    <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="br.edu.iff.pooa20161.contatossugar" />
 
     <application
         android:allowBackup="true"
