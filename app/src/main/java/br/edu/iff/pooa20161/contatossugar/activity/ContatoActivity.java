@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import br.edu.iff.pooa20161.contatossugar.R;
+import br.edu.iff.pooa20161.contatossugar.models.Contato;
 
 public class ContatoActivity extends AppCompatActivity {
     EditText nome, email, telefone;
@@ -33,5 +35,10 @@ public class ContatoActivity extends AppCompatActivity {
         nome = (EditText) findViewById(R.id.etNomeContato);
         email = (EditText) findViewById(R.id.etEmailContato);
         telefone = (EditText) findViewById(R.id.etTelefoneContato);
+        Contato contato = new Contato(nome.getText().toString(),email.getText().toString(),telefone.getText().toString());
+        contato.save();
+
+        Toast.makeText(this,"Contato Cadastrado",Toast.LENGTH_LONG).show();
+
     }
 }
