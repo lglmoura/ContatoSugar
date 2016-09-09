@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">ContatosSugar</string>
     <string name="nome">Nome</string>
+    <string-array name="contatos">
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+        <item>Luiz</item>
+        <item>Gustavo</item>
+    </string-array>
 </resources>
