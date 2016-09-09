@@ -1,9 +1,11 @@
-package br.edu.iff.pooa20161.contatossugar;
+package br.edu.iff.pooa20161.contatossugar.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import br.edu.iff.pooa20161.contatossugar.R;
 
 public class ContatoLVMainActivity extends AppCompatActivity {
 
