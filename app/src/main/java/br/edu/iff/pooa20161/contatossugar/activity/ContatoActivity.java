@@ -1,5 +1,6 @@
 package br.edu.iff.pooa20161.contatossugar.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,23 @@ public class ContatoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_contato);
+        Intent intent    = getIntent();
+        String nomep     = (String) intent.getSerializableExtra("nome");
+        String emailp    = (String) intent.getSerializableExtra("email");
+        String telefonep = (String) intent.getSerializableExtra("telefone");
+
+        EditText nome = (EditText) findViewById(R.id.etNomeContato);
+        nome.setText(nomep);
+
+        EditText email = (EditText) findViewById(R.id.etEmailContato);
+        email.setText(emailp);
+
+        EditText telefone = (EditText) findViewById(R.id.etTelefoneContato);
+        telefone.setText(telefonep);
+
+
         btsalvar = (Button) findViewById(R.id.btSalvarContato);
 
 
