@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 import br.edu.iff.pooa20161.contatossugar.R;
+import br.edu.iff.pooa20161.contatossugar.models.Contato;
+import br.edu.iff.pooa20161.contatossugar.adapter.ContatoAdapter;
 
 public class ContatoLVMainActivity extends AppCompatActivity {
 
@@ -14,8 +18,10 @@ public class ContatoLVMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato_lvmain);
 
+        ArrayList<Contato> contatos = (ArrayList) Contato.listAll(Contato.class);
+
         ListView lista = (ListView) findViewById(R.id.lvContatos);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this,R.array.contatos,android.R.layout.simple_list_item_1);
+        ArrayAdapter adapter = new ContatoAdapter(this,contatos);
         lista.setAdapter(adapter);
 
     }
