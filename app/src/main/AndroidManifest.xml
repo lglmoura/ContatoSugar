@@ -22,10 +22,12 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="br.edu.iff.pooa20161.contatossugar" />
 
-        <activity android:name=".activity.ContatoActivity">
-
-        </activity>
-        <activity android:name=".activity.ContatoLVMainActivity">
+        <activity android:name=".activity.ContatoActivity"></activity>
+        <activity android:name=".activity.ContatoLVMainActivity"></activity>
+        <activity
+            android:name=".activity.ContatoLVActivity"
+            android:label="@string/title_activity_contato_lv"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -19,4 +19,5 @@
         <item>Luiz</item>
         <item>Gustavo</item>
     </string-array>
+    <string name="title_activity_contato_lv">ContatoLVActivit</string>
 </resources>

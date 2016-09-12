@@ -1,5 +1,6 @@
 package br.edu.iff.pooa20161.contatossugar.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,13 +16,18 @@ import br.edu.iff.pooa20161.contatossugar.R;
 import br.edu.iff.pooa20161.contatossugar.models.Contato;
 import br.edu.iff.pooa20161.contatossugar.adapter.ContatoAdapter;
 
-public class ContatoLVMainActivity extends AppCompatActivity {
+public class ContatoLVMainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contato_lvmain);
 
+
+    }
+
+    protected void onResume() {
+        super.onResume();
         final ArrayList<Contato> contatos = (ArrayList) Contato.listAll(Contato.class);
 
         ListView lista = (ListView) findViewById(R.id.lvContatos);
@@ -42,5 +48,7 @@ public class ContatoLVMainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
 }
